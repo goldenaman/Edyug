@@ -1,10 +1,43 @@
-<div class="grad"></div>
-		<div class="header">
-			<div>Login<span></span></div>
+<app-nav-bar></app-nav-bar>
+<div class="login-container">
+		<div class="row">
+			<div class="col-md-6 login-form-1" style="float:left;">
+				<h3>School Login</h3>
+				<form>
+					<div class="form-group">
+						<input type="text"  class="form-control" placeholder="username *" value="" />
+					</div>
+					<div class="form-group">
+							<input type="text"  class="form-control" placeholder="institute id *" value="" />
+						</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-lg btn-success" value="Login" />
+					</div>
+					<div class="form-group">
+						<a href="#" class="ForgetPwd">Forget Password?</a>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6 login-form-2">
+				<h3>Parent/Student login</h3>
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="username *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password *" value="" />
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-lg btn-success" value="Login" />
+					</div>
+					<div class="form-group">
+
+						<a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+					</div>
+				</form>
+			</div>
 		</div>
-		<br>
-		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login"><pre> <input type="button" value="login via otp"></pre>
-		</div>
+	</div>
