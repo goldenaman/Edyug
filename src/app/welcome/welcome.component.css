@@ -4,9 +4,30 @@
     
 
     /* Center and scale the image nicely */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
     background-repeat: no-repeat;
-    background-size:100%;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-position: left top right;
+    background-size: cover;
 }
+div.centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  h1.name{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200px;
+    color: orange;
+  }
+  @media only screen and (max-width: 750px) {
+    h1 {  font-size: 40px; 
+       }
+  }
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
