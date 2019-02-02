@@ -27,8 +27,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
       {path: 'login/signUp', component: SignUpComponent },
       {path: 'signUp', component: SignUpComponent},
       {path: 'aboutUs', component: AboutUsComponent},
-      {path: 'login/home', component: WelcomeComponent }
-      {path: '**', component: WelcomeComponent }
+      {path: 'login/home', component: WelcomeComponent },
+      {path: '**', redirectTo: '' }
     ])
   ],
   providers: [],
