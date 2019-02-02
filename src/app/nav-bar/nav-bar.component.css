@@ -1,3 +1,8 @@
-.right-align{
-    float:right;
-}
+
+a{
+    display: inline;
+    margin-right: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+    }
