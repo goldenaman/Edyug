@@ -26,11 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
       {path: '', component: WelcomeComponent },
       {path: 'home', component: WelcomeComponent },
       {path: 'login', component: LoginComponent },
-      {path: 'login/signUp', component: SignUpComponent },
+      {path: 'login/signUp', component: SignUpComponent},
       {path: 'signUp', component: SignUpComponent},
       {path: 'aboutUs', component: AboutUsComponent},
-      {path: 'login/home', component: WelcomeComponent },
-      {path: '**', redirectTo: '' }
+      {path: 'login/home', component: WelcomeComponent }
     ]), HttpClientModule
   ],
   providers: [],

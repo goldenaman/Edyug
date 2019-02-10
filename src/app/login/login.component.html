@@ -5,16 +5,16 @@
 				<h3>School Login</h3>
 				<form>
 					<div class="form-group">
-						<input type="text"  class="form-control" placeholder="username *" value="" />
+						<input type="text"  class="form-control" placeholder="username *" required #Iusername/>
 					</div>
 					<div class="form-group">
-							<input type="text"  class="form-control" placeholder="institute id *" value="" />
+							<input type="text"  class="form-control" placeholder="institute id *" required #instituteId/>
 						</div>
 					<div class="form-group">
-						<input type="password" class="form-control" placeholder="Password *" value="" />
+						<input type="password" class="form-control" placeholder="Password *" required #Ipassword/>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-success" value="Login" />
+						<input type="button" class="btn btn-lg btn-success" value="Login" (click)="validateInstitute(Iusername.value, instituteId.value, Ipassword.value)" />
 					</div>
 					<div class="form-group">
 						<a href="#" class="ForgetPwd">Forget Password?</a>
@@ -25,13 +25,13 @@
 				<h3>Parent/Student login</h3>
 				<form>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="username *" value="" />
+						<input type="text" class="form-control" placeholder="username *" required #username/>
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" placeholder="Password *" value="" />
+						<input type="password" class="form-control" placeholder="Password *" required #password/>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-success" value="Login" />
+						<input type="button" class="btn btn-lg btn-success" value="Login" (click)="validateUser(username.value, password.value)"/>
 					</div>
 					<div class="form-group">
 
