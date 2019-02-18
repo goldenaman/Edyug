@@ -1,6 +1,9 @@
-<h1>list of users</h1>
-  <div class="container" *ngFor="let d of pageTitle">
-    <h2>{{d.fname}}</h2>
-    <h3>{{d.lastname}}</h3>
-    <p>{{d.id}}</p>
+<div class="container">
+  <div class="fb-profile">
+      <img align="left" class="fb-image-lg" src="../../assets/backgroundImages/smpe2.jpg" alt="Profile image example"/>
+      <img align="left" class="fb-image-profile thumbnail" src="../../assets/backgroundImages/welcome.jpg" alt="Profile image example"/>
+      <div class="fb-profile-text">
+          <h1>{{username}}</h1>
+          <p>logged in as {{pageTitle}}</p>
+      </div>
   </div>

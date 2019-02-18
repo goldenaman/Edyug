@@ -29,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'login/signUp', component: SignUpComponent},
       {path: 'signUp', component: SignUpComponent},
       {path: 'aboutUs', component: AboutUsComponent},
-      {path: 'login/home', component: WelcomeComponent }
+      {path: 'login/home', component: WelcomeComponent },
+      {path: 'profile', component: ProfileComponent}
     ]), HttpClientModule
   ],
   providers: [],

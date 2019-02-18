@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileService} from '../profile.service';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
-  providers: [ProfileService]
+  providers: [ProfileService, UserService]
 })
 export class ProfileComponent implements OnInit {
-pageTitle = [{fname: 'welcome'}];
+username;
   constructor(private profile: ProfileService) {
 this.getProfile();
   }
@@ -16,7 +17,8 @@ this.getProfile();
 getProfile = () => {
 return this.profile.getProfile().subscribe(
   data => {
-    this.pageTitle = data;
+    this.username = data;
+    console.log(data);
   },
   error => {
     console.log(error);

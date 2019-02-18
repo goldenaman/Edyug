@@ -5,23 +5,22 @@
 				<h3>signup for Institutes</h3>
 				<form>
 					<div class="form-group">
-              <p style="color:darkslateblue;"><u><b>Please enter the PCODE provided from Institute below</b></u></p>
               <div class="form-group">
-                  <input type="text" class="form-control" placeholder="your name *" value="" />
+                  <input type="text" class="form-control" placeholder="your name *" value="" #namess/>
                 </div>
-						<input type="text"  class="form-control" placeholder="institute name *" value="" />
+						<input type="text"  class="form-control" placeholder="institute name *" value="" #instituetname/>
 					</div>
 					<div class="form-group">
-             	<input type="number"  class="form-control" placeholder="contact number*" value="" />
+             	<input type="number"  class="form-control" placeholder="contact number*" value="" #contactnumber/>
 						</div>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="city *" value="" />
+						<input type="text" class="form-control" placeholder="city *" value="" #city/>
           </div>
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="state *" value="" />
+              <input type="text" class="form-control" placeholder="state *" value="" #state/>
             </div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-success" value="contact me" />
+						<input type="button" class="btn btn-lg btn-success" value="continue" (click)="registerInstitute(namess.value, instituetname.value, contactnumber.value, city.value, state.value)"/>
 					</div>
 				</form>
 			</div>
@@ -30,10 +29,10 @@
 				<form>
 					<div class="form-group">
             <p style="color:aqua;"><u><b>Please enter the PCODE provided from Institute below</b></u></p>
-						<input type="text" class="form-control" placeholder="enter pcode *" value="" />
+						<input type="text" class="form-control" placeholder="enter pcode *" value="" / #pcode>
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-success" value="continue" />
+						<input type="button" class="btn btn-lg btn-success" value="continue" #input />
 					</div>
 				</form>
 			</div>

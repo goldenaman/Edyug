@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import {Auth} from '../auth.model';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +11,23 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username: string;
-  password: string;
-  instituteId: string;
+ public auth: Auth;
 
-  constructor(private auth: AuthService, private user: UserService) { }
+  constructor(private auths: AuthService, private user: UserService, private route: Router, private http: HttpClient) { }
 
   ngOnInit() {
   }
   validateInstitute(username: string, instituteId: string, password: string) {
-    this.auth.setUser(username, instituteId, password);
+    this.auth = new Auth();
+    console.log(username,password)
+   this.auth.username = username;
+   this.auth.password = password;
+   console.log(this.auth.username, this.auth.password);
+   this.checkAuthentication(this.auth);
+    this.route.navigateByUrl('/profile');
   }
-  validateUser(username: string, password: string) {
-    this.auth.setUser(username, password, '');
+  checkAuthentication(auth: Auth) {
+    console.log('inside auth method');
+    return this.http.post<any>('localhost:8000/auth', { auth });
   }
 }
