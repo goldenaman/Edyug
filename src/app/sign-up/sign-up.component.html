@@ -11,6 +11,9 @@
 						<input type="text"  class="form-control" placeholder="institute name *" value="" #instituetname/>
 					</div>
 					<div class="form-group">
+						<input type="email"  class="form-control" placeholder="email*" value="" #email/>
+				 </div>
+					<div class="form-group">
              	<input type="number"  class="form-control" placeholder="contact number*" value="" #contactnumber/>
 						</div>
 					<div class="form-group">
@@ -20,7 +23,7 @@
               <input type="text" class="form-control" placeholder="state *" value="" #state/>
             </div>
 					<div class="form-group">
-						<input type="button" class="btn btn-lg btn-success" value="continue" (click)="registerInstitute(namess.value, instituetname.value, contactnumber.value, city.value, state.value)"/>
+						<input type="button" class="btn btn-lg btn-success" value="continue" (click)="registerInstitute(namess.value, instituetname.value, email.value, contactnumber.value, city.value, state.value)"/>
 					</div>
 				</form>
 			</div>
@@ -29,7 +32,7 @@
 				<form>
 					<div class="form-group">
             <p style="color:aqua;"><u><b>Please enter the PCODE provided from Institute below</b></u></p>
-						<input type="text" class="form-control" placeholder="enter pcode *" value="" / #pcode>
+						<input type="text" class="form-control" placeholder="enter pcode *" value=""  #pcode/>
 					</div>
 					<div class="form-group">
 						<input type="button" class="btn btn-lg btn-success" value="continue" #input />

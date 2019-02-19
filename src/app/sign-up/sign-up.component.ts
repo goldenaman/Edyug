@@ -18,7 +18,20 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
   }
+  registerInstitute(name: string, institutename: string, email: string, contactnumber: number, city: string, state: string){
+    this.sendemailrequestingdemo(name, institutename, email, contactnumber, city, state).subscribe(
+      (data) => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
   infocollectionForParent(pcode: string) {
     pcode = pcode.toLowerCase();
+  }
+  sendemailrequestingdemo(name: string, institutename: string, email: string, contactnumber: number, city: string, state: string){
+    return this.httpclient.post(this.baseUrl + '/sendsignupmail', { name, institutename, email, contactnumber, city, state } );
   }
 }

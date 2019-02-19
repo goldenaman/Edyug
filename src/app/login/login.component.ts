@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- isauthorized: boolean;
+ isauthorized: string;
 
   constructor(private auths: AuthService, private route: Router, private http: HttpClient) { }
 
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
   validateInstitute(username: string, instituteId: string, password: string) {
     this.isauthorized = this.auths.validateInstitute(username, instituteId, password);
-    console.log(' i was printed')
-  this.route.navigateByUrl('/profile');
+    console.log(this.isauthorized)
+    this.route.navigateByUrl('/profile');
   }
 }
