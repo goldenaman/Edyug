@@ -1,9 +1,98 @@
-<div class="container">
-  <div class="fb-profile">
-      <img align="left" class="fb-image-lg" src="../../assets/backgroundImages/smpe2.jpg" alt="Profile image example"/>
-      <img align="left" class="fb-image-profile thumbnail" src="../../assets/backgroundImages/welcome.jpg" alt="Profile image example"/>
-      <div class="fb-profile-text">
-          <h1>{{username}}</h1>
-          <p>logged in as {{pageTitle}}</p>
-      </div>
-  </div>
+
+<!-- Bootstrap core CSS     -->
+<div class="wrapper">
+    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
+
+        <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Eduvez ind
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                        <a class="nav-link" routerLink="/profile/dashboard" routerLinkActive="active">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Table List</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Typography</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons.html">
+                        <i class="pe-7s-science"></i>
+                        <p>Icons</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Maps</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="notifications.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+                <li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="pe-7s-rocket"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+            <div class="fb-profile">
+                <img align="left" class="fb-image-lg" src="../../assets/backgroundImages/smpe2.jpg" alt="Profile image example"/>
+                <img align="left" class="fb-image-profile thumbnail" src="../../assets/backgroundImages/welcome.jpg" alt="Profile image example"/>
+                <div class="fb-profile-text">
+                    <h1>{{username}}</h1>
+                    <p>logged in as {{pageTitle}}</p>
+                </div>
+            </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        demo.initChartist();
+
+        $.notify({
+            icon: 'pe-7s-gift',
+            message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+
+        }, {
+                type: 'info',
+                timer: 4000
+            });
+
+    });
+</script>

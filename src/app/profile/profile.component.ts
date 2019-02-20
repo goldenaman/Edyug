@@ -17,7 +17,7 @@ getProfile = () => {
 return this.profile.getProfile().subscribe(
   data => {
     this.username = data;
-    console.log(data);
+    console.log(data);  
   },
   error => {
     console.log(error);

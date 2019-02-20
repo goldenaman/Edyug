@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     LoginComponent,
     SignUpComponent,
-    ProfileComponent
+    ProfileComponent,
+    DashboardComponent
   ],
   exports: [ RouterModule],
   imports: [
@@ -30,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'signUp', component: SignUpComponent},
       {path: 'aboutUs', component: AboutUsComponent},
       {path: 'login/home', component: WelcomeComponent },
-      {path: 'profile', component: ProfileComponent}
+      {path: 'profile', component: ProfileComponent},
+      {path: 'profile/dashboard', component: DashboardComponent}
     ]), HttpClientModule
   ],
   providers: [],
